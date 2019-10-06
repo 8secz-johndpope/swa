@@ -2,13 +2,7 @@ const mysql = require('mysql')
 const MySQLEvents = require('@patrickwalker/mysql-events');
 const sulla = require('./controllers/initializer')
 
-const mysqlConfig = {
-  connectionLimit : 10,
-  host            : '192.168.1.99',
-  user            : 'root',
-  password        : 'pkm',
-  database        : 'simpus'
-}
+const mysqlConfig = require('./config')
 const eventConfig = {
   startAtEnd: true,
   excludedSchemas: {
